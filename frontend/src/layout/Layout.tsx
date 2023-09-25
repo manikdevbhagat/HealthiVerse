@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import Routes from "../routes/Routes";
+import Routers from "../routes/Routers";
 
 const Layout = () => {
   return (
     <div>
       <Header />
       <main>
-        <Routes />
+        <Routers />
       </main>
       <Footer />
     </div>
