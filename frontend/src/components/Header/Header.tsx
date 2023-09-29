@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logo from "../../assets/images/logo.png";
 import userImg from "../../assets/images/avatar-icon.png";
 import { NavLink, Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
 
 const navLinks = [
   {
@@ -24,14 +25,15 @@ const navLinks = [
 ];
 
 const Header = () => {
+  const [showMenu, setShowMenu] = useState<Boolean>(false);
   const headerRef = useRef<HTMLElement>(null);
   const menuRef = useRef<typeof BiMenu>(null);
 
   const handleStickyHeader = () => {
     window.addEventListener("scroll", () => {
       if (
-        document.body.scrollTop > 75 ||
-        document.documentElement.scrollTop > 75
+        document.body.scrollTop > 0 ||
+        document.documentElement.scrollTop > 0
       ) {
         headerRef.current?.classList.add("sticky__header");
       } else {
@@ -40,7 +42,10 @@ const Header = () => {
     });
   };
 
-  const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
+  const toggleMenu = () => {
+    menuRef.current.classList.toggle("show__menu");
+    setShowMenu(!showMenu);
+  };
 
   useEffect(() => {
     handleStickyHeader();
@@ -97,7 +102,11 @@ const Header = () => {
             </Link>
 
             <span className="md:hidden" onClick={toggleMenu}>
-              <BiMenu className="w-6 h-6 cursor-pointer" />
+              {showMenu ? (
+                <AiOutlineClose className="w-6 h-6 cursor-pointer relative z-50" />
+              ) : (
+                <BiMenu className="w-6 h-6 cursor-pointer" />
+              )}
             </span>
           </div>
         </div>
