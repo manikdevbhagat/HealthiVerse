@@ -25,7 +25,13 @@
     @apply bg-white w-full h-[75px] leading-[75px] z-50;
   }
   .hero__section{
-    @apply bg-[url('./assets/images/background-unsplash.jpg')] bg-no-repeat bg-center bg-cover;
+    @apply bg-gray-200;
+  }
+  .testimonial__section{
+    @apply bg-gray-200;
+  }
+  .footer{
+    @apply bg-gray-100;
   }
 }
 

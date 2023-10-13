@@ -58,7 +58,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/*Logo*/}
           <div>
-            <img src={logo} alt="" className="max-w-max w-[200px] h-auto" />
+            <img src={logo} alt="" className="max-w-max w-[150px] md:w-[200px] h-auto" />
           </div>
           {/*Menu*/}
           <div className="navigation" ref={menuRef} onClick={toggleMenu}>
