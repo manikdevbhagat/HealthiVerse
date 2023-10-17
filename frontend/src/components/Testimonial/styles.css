@@ -1,0 +1,23 @@
+.testimonial-container .swiper-slide {
+  height: -webkit-max-content!important;
+  height: -moz-max-content!important;
+  height: max-content!important;
+  
+}
+
+.testimonial-container .swiper-slide-testimonial{
+  background-color: gray;
+  color: white;
+  border-radius: 12px;
+}
+
+
+.testimonial-container .swiper-slide-active{
+  background-color: #0067FF;
+  color: white;
+  border-radius: 12px;
+}
+
+.testimonial-container .swiper-slide p, .testimonial-container .swiper-slide h4{
+  color: white;
+}
