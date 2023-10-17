@@ -33,13 +33,13 @@ const Contact = () => {
 
   return (
     <>
-      <section>
+      <section className="">
         <div className="px-4 mx-auto max-w-screen-md">
           <h2 className="heading text-center ">Contact Us</h2>
           <p className="mb-8 lg:mb-16 font-light text-center text__para">
             Share your details and get a callback from our team
           </p>
-          <form className="shadow-xl p-8 rounded-xl border border-gray-400" onSubmit={handleSubmit}>
+          <form className="shadow-xl bg-gray-100 p-8 rounded-xl border border-gray-400" onSubmit={handleSubmit}>
             <div className="mb-8 flex items-center justify-between">
               <label
                 htmlFor=""
