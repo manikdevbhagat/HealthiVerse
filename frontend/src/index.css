@@ -25,10 +25,10 @@
     @apply bg-white w-full h-[75px] leading-[75px] z-50;
   }
   .hero__section{
-    @apply bg-gray-200;
+    @apply bg-[#fde6c4];
   }
   .testimonial__section{
-    @apply bg-gray-200;
+    @apply bg-[#fde6c4];
   }
   .footer{
     @apply bg-gray-100;
