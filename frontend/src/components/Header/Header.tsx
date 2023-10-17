@@ -53,7 +53,7 @@ const Header = () => {
   });
 
   return (
-    <header ref={headerRef} className="header flex items-center">
+    <header ref={headerRef} className="header flex items-center border-b border-b-[3px]">
       <div className="container">
         <div className="flex items-center justify-between">
           {/*Logo*/}
