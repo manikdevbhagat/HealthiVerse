@@ -1,7 +1,7 @@
 import React from "react";
-import heroImg01 from "../assets/images/gym1.jpg";
-import heroImg02 from "../assets/images/gym3.jpg";
-import heroImg03 from "../assets/images/dietician2.jpg";
+import heroImg01 from "../assets/images/healthiverse1.jfif";
+import heroImg02 from "../assets/images/gym5.jpg";
+import heroImg03 from "../assets/images/dietician3.jpg";
 import gymImg from "../assets/images/gym1.jpg";
 import trainerImg from "../assets/images/trainer1.jpg";
 import dieticianImg from "../assets/images/dietician1.jpg";
@@ -13,11 +13,11 @@ const Home = () => {
   return (
     <>
       {/*hero section start*/}
-      <section className="hero__section pt-[60px] 2xl:h-[800px]">
+      <section className="hero__section pt-0 pb-4">
         <div className="container">
-          <div className="flex flex-col lg:flex-row gap-[90px] items-start justify-between">
+          <div className="flex flex-col lg:flex-row items-start justify-between">
             {/*hero content */}
-            <div>
+            <div className="pt-[60px]">
               <div className="lg:w-[570px]">
                 <h1 className="text-[36px] leading-[46px] text-headingColor font-[800] md:text-[60px] md:leading-[70px]">
                   Discover Your Path to a Healthier You.
@@ -56,20 +56,8 @@ const Home = () => {
             <div className="hidden lg:flex gap-[30px] justify-end">
               <div>
                 <img
-                  className="hidden lg:block w-full h-auto max-h-[600px] rounded-xl"
+                  className="hidden lg:block w-full h-max-[800px] h-auto rounded-xl"
                   src={heroImg01}
-                  alt=""
-                />
-              </div>
-              <div className="lg:mt-[30px]">
-                <img
-                  className="hidden lg:block w-full h-auto max-h-[300px] rounded-xl mb-[30px]"
-                  src={heroImg02}
-                  alt=""
-                />
-                <img
-                  className="hidden lg:block w-full h-auto max-h-[300px] rounded-xl mb-[30px]"
-                  src={heroImg03}
                   alt=""
                 />
               </div>
@@ -98,11 +86,16 @@ const Home = () => {
           >
             <div className="py-[30px] px-5">
               <div className="flex items-center justify-center">
-                <img
-                  className="w-full h-[400px] max-w-[350px] rounded-xl"
-                  src={gymImg}
-                  alt=""
-                />
+                <Link
+                  to="/gyms"
+                  className="hover:scale-105 hover:shadow-xl cursor-pointer w-full h-[400px] max-w-[350px]"
+                >
+                  <img
+                    className="w-full h-[400px] max-w-[350px] rounded-xl"
+                    src={gymImg}
+                    alt=""
+                  />
+                </Link>
               </div>
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
@@ -119,11 +112,16 @@ const Home = () => {
             </div>
             <div className="py-[30px] px-5">
               <div className="flex items-center justify-center">
-                <img
-                  className="w-full h-[400px] max-w-[350px] rounded-xl"
-                  src={trainerImg}
-                  alt=""
-                />
+                <Link
+                  to="/trainers"
+                  className="hover:scale-105 hover:shadow-xl cursor-pointer w-full h-[400px] max-w-[350px]"
+                >
+                  <img
+                    className="w-full h-[400px] max-w-[350px] rounded-xl"
+                    src={trainerImg}
+                    alt=""
+                  />
+                </Link>
               </div>
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
@@ -140,11 +138,16 @@ const Home = () => {
             </div>
             <div className="py-[30px] px-5">
               <div className="flex items-center justify-center">
-                <img
-                  className="w-full h-[400px] max-w-[350px] rounded-xl"
-                  src={dieticianImg}
-                  alt=""
-                />
+                <Link
+                  to="/dieticians"
+                  className="hover:scale-105 hover:shadow-xl cursor-pointer w-full h-[400px] max-w-[350px]"
+                >
+                  <img
+                    className="w-full h-[400px] max-w-[350px] rounded-xl"
+                    src={dieticianImg}
+                    alt=""
+                  />
+                </Link>
               </div>
               <div className="mt-[30px]">
                 <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
@@ -166,16 +169,15 @@ const Home = () => {
 
       {/*testimonials section */}
       <section className="testimonial__section">
-        <div className="container">
+        <div className="container md:max-w-[550px] flex flex-col items-center overflow-hidden">
           <div className="xl:w-[470px] mx-auto">
             <h2 className="heading text-center">Client Testimonials</h2>
             <p className="text__para text-center">
-              Here's what some of our happy clients have to say
+              Here's what some of our happy clients have to say:
             </p>
           </div>
-          <Testimonial/>
+          <Testimonial />
         </div>
-        
       </section>
       {/*testimonials section end*/}
 
@@ -185,9 +187,11 @@ const Home = () => {
           <div className="lg:w-[650px] mx-auto flex flex-col items-center justify-center">
             <h2 className="heading text-center">Still have questions?</h2>
             <p className="text__para text-center">
-            Please help us understand your doubts and we’ll get back to you
+              Please help us understand your doubts and we’ll get back to you
             </p>
-            <button className="btn">Contact Us</button>
+            <Link to="/contact">
+              <button className="btn">Contact Us</button>
+            </Link>
           </div>
         </div>
       </section>
