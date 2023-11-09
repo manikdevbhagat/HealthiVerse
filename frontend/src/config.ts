@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://healthiverse-server.onrender.com/api/v1'
+export const BASE_URL = import.meta.env.VITE_ENDPOINT + '/api/v1'

@@ -1,7 +1,7 @@
 // socketService.ts
 import { io, Socket } from "socket.io-client";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = import.meta.env.VITE_ENDPOINT;
 let socket: Socket;
 
 export function initializeSocket() {
