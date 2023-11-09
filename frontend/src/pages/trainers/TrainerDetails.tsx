@@ -1,24 +1,22 @@
 import React, { useState, useEffect } from "react";
-import gymImg from "../../assets/images/gym1.jpg";
 import starIcon from "../../assets/images/Star.png";
-import GymAbout from "../../components/Business/BusinessAbout";
 import Feedback from "../../components/Business/Feedback";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxhooks";
 import { useParams } from "react-router-dom";
-import { getSingleGym } from "../../features/slices/gyms/singleGymSlice";
 import { ClipLoader } from "react-spinners";
 import MembershipPrice from "../../components/Business/MembershipPrice";
 import BusinessAbout from "../../components/Business/BusinessAbout";
+import { getSingleTrainer } from "../../features/slices/trainers/singleTrainerSlice";
 
-const GymDetails = () => {
+const TrainerDetails = () => {
   const [tab, setTab] = useState("about");
   const { id } = useParams();
   const dispatch = useAppDispatch();
-  const { gym, loading } = useAppSelector((state) => state.singleGym);
+  const { trainer, loading } = useAppSelector((state) => state.singleTrainer);
 
   const fetchData = () => {
     if (id) {
-      dispatch(getSingleGym(id)).unwrap().then(console.log).catch(console.log);
+      dispatch(getSingleTrainer(id)).unwrap().then(console.log).catch(console.log);
     } else {
       return;
     }
@@ -41,14 +39,14 @@ const GymDetails = () => {
               <div className="lg:col-span-2">
                 <div className="flex items-center flex-col gap-10 sm:flex-row sm:items-start">
                   <img
-                    src={gym?.photo}
+                    src={trainer?.photo}
                     alt=""
                     className="max-w-[300px] max-h-[400px] rounded-xl"
                   />
 
                   <div>
                     <h3 className="text-headingColor text-[22px] leading-9 font-bold">
-                      {gym?.name}
+                      {trainer?.name}
                     </h3>
 
                     <div className="flex items-center gap-[6px]">
@@ -56,24 +54,15 @@ const GymDetails = () => {
                         className="flex items-center gap-[6px] text-[14px] leading-5 lg:text-[16px]
                   lg:leading:7 font-semiBold text-headingColor"
                       >
-                        <img src={starIcon} alt="" /> {gym?.avgRating.toFixed(1)}
+                        <img src={starIcon} alt="" /> {trainer?.avgRating.toFixed(1)}
                       </span>
 
                       <span
                         className="text-[14px] leading-5 lg:text-[16px] lg:leading-7
                   font-[400] text-textColor"
                       >
-                        ({gym?.totalRating})
+                        ({trainer?.totalRating})
                       </span>
-                    </div>
-
-                    <div className="mt-4">
-                      <h3 className="text-headingColor text-[18px]">
-                        Open Hours:
-                      </h3>
-                      <p className="mt-1 text__para text-[14px] leading-5 md:text-[15px] lg:max-w-[390px]">
-                        {gym?.openHours.from} - {gym?.openHours.to}
-                      </p>
                     </div>
 
                     <div className="mt-4">
@@ -81,7 +70,7 @@ const GymDetails = () => {
                         Services Available:
                       </h3>
                       <p className="mt-1 text__para text-[14px] leading-5 md:text-[15px] lg:max-w-[390px]">
-                        {gym?.services.map((service, index) => (
+                        {trainer?.services.map((service, index) => (
                           <span key={index}>
                             {index === 0 ? "" : " | "}
                             {service}{" "}
@@ -90,14 +79,6 @@ const GymDetails = () => {
                       </p>
                     </div>
 
-                    <div className="mt-4">
-                      <h3 className="text-headingColor text-[18px]">
-                        Address:
-                      </h3>
-                      <p className="mt-1 text__para text-[14px] leading-5 md:text-[15px] lg:max-w-[390px]">
-                        {gym?.address}
-                      </p>
-                    </div>
                   </div>
                 </div>
                 <div className="mt-[50px] border-b border-solid border-[##0066ff34]">
@@ -121,13 +102,13 @@ const GymDetails = () => {
                   </button>
                 </div>
                 <div className="mt-[50px] ">
-                  {tab === "about" && <BusinessAbout business={gym} />}
-                  {tab === "feedback" && <Feedback business={gym} />}
+                  {tab === "about" && <BusinessAbout business={trainer} />}
+                  {tab === "feedback" && <Feedback business={trainer} />}
                 </div>
               </div>
 
               <div>
-                <MembershipPrice business={gym} loading={loading} />
+                <MembershipPrice business={trainer} loading={loading} />
               </div>
             </div>
           </div>
@@ -137,4 +118,4 @@ const GymDetails = () => {
   );
 };
 
-export default GymDetails;
+export default TrainerDetails;

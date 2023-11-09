@@ -1,19 +1,17 @@
 import React from "react";
 import heroImg01 from "../assets/images/healthiverse1.jfif";
-import heroImg02 from "../assets/images/gym5.jpg";
-import heroImg03 from "../assets/images/dietician3.jpg";
-import gymImg from "../assets/images/gym1.jpg";
-import trainerImg from "../assets/images/trainer1.jpg";
-import dieticianImg from "../assets/images/dietician1.jpg";
 import { Link } from "react-router-dom";
-import { BsArrowRight } from "react-icons/bs";
 import Testimonial from "../components/Testimonial/Testimonial";
+import Services from "./Services";
+import { CgGym } from "react-icons/cg";
+import { FiUserCheck } from "react-icons/fi";
+import { BiRun } from "react-icons/bi";
 
 const Home = () => {
   return (
     <>
       {/*hero section start*/}
-      <section className="hero__section pt-0 pb-4">
+      <section className="hero__section pt-0 pb-6">
         <div className="container">
           <div className="flex flex-col lg:flex-row items-start justify-between">
             {/*hero content */}
@@ -25,32 +23,52 @@ const Home = () => {
                 <p className="text__para">
                   Your One-Stop Platform for Fitness and Nutrition.
                 </p>
-                <button className="btn">Get Started Now</button>
               </div>
               {/*hero numbers*/}
-              <div className="mt-[30px] lg:mt-[70px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[30px]">
-                <div>
-                  <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[600] text-headingColor">
+              <div className="mt-[30px] lg:mt-[70px] flex flex-row items-start gap-6 lg:gap-[30px]">
+                <div className="flex flex-col items-center justify-start">
+                  <div className="flex items-center h-[60px] w-[60px] mb-3 justify-center rounded-full bg-blue-500 ">
+                    <CgGym
+                      style={{ height: "45px", width: "45px", color: "white" }}
+                    />
+                  </div>
+                  <h6 className="text-2xl sm:text-4xl font-bold text-deep-purple-accent-400">
                     10k+
-                  </h2>
-                  <span className="w-[100px] h-2 bg-yellowColor rounded-full block mt-[-14px]" />
-                  <p className="text__para">Fitness Locations</p>
+                  </h6>
+                  <p className="mb-2 text-center font-bold text-md">
+                    Fitness Locations
+                  </p>
                 </div>
-                <div>
-                  <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[600] text-headingColor">
-                    1k+
-                  </h2>
-                  <span className="w-[100px] h-2 bg-irisBlueColor rounded-full block mt-[-14px]" />
-                  <p className="text__para">Coaches</p>
+                <div className="flex flex-col items-center justify-start">
+                  <div className="flex items-center h-[60px] w-[60px] mb-3 justify-center rounded-full bg-yellow-400 ">
+                    <BiRun
+                      style={{ height: "45px", width: "45px", color: "white" }}
+                    />
+                  </div>
+                  <h6 className="text-2xl sm:text-4xl  font-bold text-deep-purple-accent-400">
+                    1K+
+                  </h6>
+                  <p className="mb-2 text-center font-bold text-md">Coaches</p>
                 </div>
-                <div>
-                  <h2 className="text-[36px] leading-[56px] lg:text-[44px] lg:leading-[54px] font-[600] text-headingColor">
+                <div className="flex flex-col items-center justify-start">
+                  <div className="flex items-center h-[60px] w-[60px] mb-3 justify-center rounded-full bg-green-500 ">
+                    <FiUserCheck
+                      style={{ height: "35px", width: "35px", color: "white" }}
+                    />
+                  </div>
+                  <h6 className="text-2xl sm:text-4xl  font-bold text-deep-purple-accent-400">
                     100%
-                  </h2>
-                  <span className="w-[100px] h-2 bg-greenColor rounded-full block mt-[-14px]" />
-                  <p className="text__para">Client Satisfaction</p>
+                  </h6>
+                  <p className="mb-2 text-center font-bold text-md">
+                    Client Satisfaction
+                  </p>
                 </div>
               </div>
+              <Link to="/services">
+                <button className="py-4 px-4 mt-8 bg-primaryColor hover:bg-purple-700 focus:ring-purple-500 focus:ring-offset-purple-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full ">
+                  Get Started Now
+                </button>
+              </Link>
             </div>
 
             <div className="hidden lg:flex gap-[30px] justify-end">
@@ -68,107 +86,11 @@ const Home = () => {
       {/*hero section end*/}
 
       {/*how it works section*/}
-      <section>
-        <div className="container">
-          <div className="lg:w-[650px] mx-auto">
-            <h2 className="heading text-center">How HealthiVerse helps you</h2>
-            <p className="text__para text-center">
-              At HealthiVerse, we're passionate about helping you achieve your
-              health and fitness goals. Our platform seamlessly connects you
-              with a world of fitness options, from top-rated gyms to certified
-              personal trainers and registered dieticians.
-            </p>
-          </div>
-
-          <div
-            className="grid grid-cols-1 lg:grid-cols-3 
-          gap-5 lg:gap-[30px] mt-[30px] lg:mt-[55px]"
-          >
-            <div className="py-[30px] px-5">
-              <div className="flex items-center justify-center">
-                <Link
-                  to="/gyms"
-                  className="hover:scale-105 hover:shadow-xl cursor-pointer w-full h-[400px] max-w-[350px]"
-                >
-                  <img
-                    className="w-full h-[400px] max-w-[350px] rounded-xl"
-                    src={gymImg}
-                    alt=""
-                  />
-                </Link>
-              </div>
-              <div className="mt-[30px]">
-                <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
-                  Find a Gym
-                </h2>
-                <Link
-                  to="/gyms"
-                  className="w-[44px] h-[44px] rounded-full border border-solid 
-                border-black mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
-                >
-                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
-                </Link>
-              </div>
-            </div>
-            <div className="py-[30px] px-5">
-              <div className="flex items-center justify-center">
-                <Link
-                  to="/trainers"
-                  className="hover:scale-105 hover:shadow-xl cursor-pointer w-full h-[400px] max-w-[350px]"
-                >
-                  <img
-                    className="w-full h-[400px] max-w-[350px] rounded-xl"
-                    src={trainerImg}
-                    alt=""
-                  />
-                </Link>
-              </div>
-              <div className="mt-[30px]">
-                <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
-                  Find a Trainer
-                </h2>
-                <Link
-                  to="/trainers"
-                  className="w-[44px] h-[44px] rounded-full border border-solid 
-                border-black mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
-                >
-                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
-                </Link>
-              </div>
-            </div>
-            <div className="py-[30px] px-5">
-              <div className="flex items-center justify-center">
-                <Link
-                  to="/dieticians"
-                  className="hover:scale-105 hover:shadow-xl cursor-pointer w-full h-[400px] max-w-[350px]"
-                >
-                  <img
-                    className="w-full h-[400px] max-w-[350px] rounded-xl"
-                    src={dieticianImg}
-                    alt=""
-                  />
-                </Link>
-              </div>
-              <div className="mt-[30px]">
-                <h2 className="text-[26px] leading-9 text-headingColor font-[700] text-center">
-                  Find a Dietician
-                </h2>
-                <Link
-                  to="/dieticians"
-                  className="w-[44px] h-[44px] rounded-full border border-solid 
-                border-black mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none"
-                >
-                  <BsArrowRight className="group-hover:text-white w-6 h-5" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Services />
       {/*how it works section end*/}
 
       {/*testimonials section */}
-      <section className="testimonial__section">
+      <section className="bg-gray-100">
         <div className="container md:max-w-[550px] flex flex-col items-center overflow-hidden">
           <div className="xl:w-[470px] mx-auto">
             <h2 className="heading text-center">Client Testimonials</h2>

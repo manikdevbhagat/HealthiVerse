@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { BiSolidUser } from "react-icons/bi";
+import { MdEmail } from "react-icons/md";
 
 interface ContactFormData {
   name: string;
@@ -39,11 +41,11 @@ const Contact = () => {
           <p className="mb-8 lg:mb-16 font-light text-center text__para">
             Share your details and get a callback from our team
           </p>
-          <form className="shadow-xl bg-gray-100 p-8 rounded-xl border border-gray-400" onSubmit={handleSubmit}>
+          <form className="shadow-xl bg-gray-800 p-8 rounded-xl border border-gray-400" onSubmit={handleSubmit}>
             <div className="mb-8 flex items-center justify-between">
               <label
                 htmlFor=""
-                className="text-headingColor font-bold text-[16px] leading-7"
+                className="text-white font-bold text-[16px] leading-7"
               >
                 I am a:
                 <select
@@ -60,28 +62,44 @@ const Contact = () => {
                 </select>
               </label>
             </div>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 mb-8  border-b border-solid border-blue-800 
-              focus:outline-none focus:border-b-primaryColor text-[16px] leading-7 text-headingColor
-              placeholder:text-textColor rounded-md cursor-pointer"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 mb-8 border-b border-solid border-blue-800 
-              focus:outline-none focus:border-b-primaryColor text-[16px] leading-7 text-headingColor
-              placeholder:text-textColor rounded-md cursor-pointer"
-              required
-            />
+            <div className="flex flex-col mb-4">
+                <div className="flex relative">
+                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+                    <BiSolidUser />
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="Your Full Name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className=" rounded-r-lg flex-1 appearance-none 
+                    border border-gray-300 w-full py-3 px-4 bg-white 
+                    text-gray-700 placeholder-gray-400 shadow-sm text-base 
+                    focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col mb-4">
+                <div className="flex relative">
+                  <span className="rounded-l-md inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
+                    <MdEmail />
+                  </span>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className=" rounded-r-lg flex-1 appearance-none 
+                    border border-gray-300 w-full py-3 px-4 bg-white 
+                    text-gray-700 placeholder-gray-400 shadow-sm text-base 
+                    focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    required
+                  />
+                </div>
+              </div>
             <textarea
               name="message"
               value={formData.message}

@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxhooks.ts";
-import { getAllGyms } from "../../features/slices/gyms/allGymsSlice.ts";
 import { Link } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import BusinessCard from "../../components/Business/BusinessCard.tsx";
+import { getAllTrainers } from "../../features/slices/trainers/allTrainersSlice.ts";
 
-const Gyms = () => {
+const Trainers = () => {
   const dispatch = useAppDispatch();
-  const { gyms, loading } = useAppSelector((state) => state.allGyms);
+  const { trainers, loading } = useAppSelector((state) => state.allTrainers);
   const [searchInput, setSearchInput] = useState<string>("");
 
   const fetchData = () => {
-    dispatch(getAllGyms()).unwrap().then(console.log).catch(console.log);
+    dispatch(getAllTrainers()).unwrap().then(console.log).catch(console.log);
   };
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const Gyms = () => {
     <>
       <section className="bg-white">
         <div className="container text-center">
-          <h2 className="heading">Find a Gym</h2>
+          <h2 className="heading">Find a Trainer</h2>
           <div
             className="max-w-[570px] mt-[30px] mx-auto bg-purple-100
         rounded-md flex items-center justify-between"
@@ -38,7 +38,7 @@ const Gyms = () => {
               onChange={handleSearch}
               className="py-4 pl-4 pr-2 bg-transparent w-full 
           focus:outline-none cursor-pointer placeholder:text-textColor"
-              placeholder="Search Gyms"
+              placeholder="Search Trainers"
             />
           </div>
         </div>
@@ -53,10 +53,12 @@ const Gyms = () => {
           <section className="pt-0">
             <div className="container">
               <div className="flex gap-5 flex-wrap justify-around">
-                {gyms.map((gym) =>
-                  gym.name.toLowerCase().includes(searchInput.toLowerCase()) ? (
-                    <Link key={gym._id} to={`/gyms/${gym._id}`}>
-                      <BusinessCard business={gym} />
+                {trainers.map((trainer) =>
+                  trainer.name
+                    .toLowerCase()
+                    .includes(searchInput.toLowerCase()) ? (
+                    <Link key={trainer._id} to={`/trainers/${trainer._id}`}>
+                      <BusinessCard business={trainer} />
                     </Link>
                   ) : (
                     <></>
@@ -71,4 +73,4 @@ const Gyms = () => {
   );
 };
 
-export default Gyms;
+export default Trainers;
