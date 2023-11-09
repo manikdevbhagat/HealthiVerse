@@ -41,7 +41,7 @@ const connectDB = async () => {
   }
 };
 
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
   res.send("Server is running");
 });
 
