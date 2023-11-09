@@ -8,7 +8,7 @@ export const authenticate = async (req, res, next) => {
   if (!tokenBearer || !tokenBearer.startsWith("Bearer")) {
     return res.status(401).json({
       success: false,
-      message: "No token found. Authorization failed.",
+      message: "Authorization failed.",
     });
   }
 
@@ -27,7 +27,7 @@ export const authenticate = async (req, res, next) => {
 
     return res.status(401).json({
       success: false,
-      message: "Invalid token. Authorization failed.",
+      message: "Authorization failed.",
     });
   }
 };
