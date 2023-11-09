@@ -17,10 +17,10 @@ import DieticianDetails from "../pages/dieticians/DieticianDetails";
 import DieticianProfile from "../pages/dieticians/DieticianProfile";
 import DieticianMemberships from "../pages/dieticians/DieticianMemberships";
 import About from "../pages/About";
-import Gyms from "../pages/Gyms/Gyms.tsx";
-import GymDetails from "../pages/Gyms/GymDetails.tsx";
-import GymProfile from "../pages/Gyms/GymProfile.tsx";
-import GymMemberships from "../pages/Gyms/GymMemberships.tsx";
+import Gyms from "../pages/gyms/Gyms.tsx";
+import GymDetails from "../pages/gyms/GymDetails.tsx";
+import GymProfile from "../pages/gyms/GymProfile.tsx";
+import GymMemberships from "../pages/gyms/GymMemberships.tsx";
 const Routers = () => {
   return (
     <Routes>
