@@ -5,7 +5,7 @@ const MembershipSchema = new mongoose.Schema(
     business: {
       businessType: {
         type: String,
-        enum: ["Gym", "Trainer", "Dieitician"],
+        enum: ["Gym", "Trainer", "Dietician"],
         required: true,
       },
       businessData: {
