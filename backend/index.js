@@ -41,10 +41,6 @@ const connectDB = async () => {
   }
 };
 
-app.use("/", (req, res) => {
-  res.send("Server is running");
-});
-
 
 //routes
 app.use("/api/v1/auth", authRoutes);
