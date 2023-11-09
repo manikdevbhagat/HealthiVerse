@@ -20,8 +20,8 @@ const Login = () => {
   }, []);
 
   const [formData, setFormData] = useState<LoginFormData>({
-    email: "",
-    password: "",
+    email: "democlient@test.com",
+    password: "demo1234",
   });
   const { loading } = useAppSelector((state) => state.login);
   const dispatch = useAppDispatch();
