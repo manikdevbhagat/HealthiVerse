@@ -4,11 +4,11 @@ import { AiFillStar } from "react-icons/ai";
 import FeedbackForm from "./FeedbackForm";
 import { Dietician, Gym, Trainer } from "../../models";
 
-interface Props{
-  business: Gym|Trainer|Dietician|null;
+interface Props {
+  business: Gym | Trainer | Dietician | null;
 }
 
-const Feedback = ({business}:Props) => {
+const Feedback = ({ business }: Props) => {
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   // const { gym } = useAppSelector((state) => state.singleGym);
 
@@ -22,28 +22,45 @@ const Feedback = ({business}:Props) => {
           All reviews ({business?.totalRating})
         </h4>
         {business?.reviews.map((review, index) => (
-          <div key={index} className="flex justify-between gap-4 mb-[30px] border-gray-300 border-b pb-4">
-            <div className="flex gap-3">
+          <div
+            key={index}
+            className="flex gap-4 mb-[30px] border-gray-300 border-b pb-4"
+          >
+            <div>
               <figure className="block w-10 h-10">
-                <img src={review.client.photo} alt="" className="min-w-[40px] h-full rounded-full" />
+                <img
+                  src={review.client.photo}
+                  alt=""
+                  className="min-w-[40px] h-full rounded-full"
+                />
               </figure>
+            </div>
+            <div className="flex flex-col w-full">
+              <div className="flex justify-between">
+                <div>
+                  <h5 className="text-[16px] leading-6 text-primaryColor font-bold">
+                    {review.client.name}
+                  </h5>
+                  <p className="text-[14px] leading-6 text-textColor">
+                    {formatDate(review.updatedAt.toString())}
+                  </p>
+                </div>
+                <div>
+                  <div className="flex gap-1">
+                    {Array.from({ length: review.rating }).map((index) => (
+                      <AiFillStar key={index} className="text-yellowColor" />
+                    ))}
+                  </div>
+                </div>
+              </div>
               <div>
-                <h5 className="text-[16px] leading-6 text-primaryColor font-bold">
-                  {review.client.name}
-                </h5>
-                <p className="text-[14px] leading-6 text-textColor">
-                  {formatDate(review.updatedAt.toString())}
-                </p>
                 <p className="text__para font-medium text-[15px]">
                   {review.reviewText}
                 </p>
               </div>
             </div>
-
-            <div className="flex gap-1">
-              {Array.from({ length: review.rating }).map((index) => (
-                <AiFillStar key={index} className="text-yellowColor" />
-              ))}
+            <div className="flex gap-3">
+              <div></div>
             </div>
           </div>
         ))}
@@ -59,7 +76,7 @@ const Feedback = ({business}:Props) => {
 
       {showFeedbackForm && (
         <>
-          <FeedbackForm business={business}/>
+          <FeedbackForm business={business} />
         </>
       )}
     </div>
