@@ -66,7 +66,7 @@ const GymDetails = () => {
                     </div>
 
                     <div className="mt-4">
-                      <h3 className="text-headingColor text-[18px]">
+                      <h3 className="text-headingColor font-semibold text-[18px]">
                         Open Hours:
                       </h3>
                       <p className="mt-1 text__para text-[14px] leading-5 md:text-[15px] lg:max-w-[390px]">
@@ -75,7 +75,7 @@ const GymDetails = () => {
                     </div>
 
                     <div className="mt-4">
-                      <h3 className="text-headingColor text-[18px]">
+                      <h3 className="text-headingColor font-semibold text-[18px]">
                         Services Available:
                       </h3>
                       <p className="mt-1 text__para text-[14px] leading-5 md:text-[15px] lg:max-w-[390px]">
@@ -89,7 +89,7 @@ const GymDetails = () => {
                     </div>
 
                     <div className="mt-4">
-                      <h3 className="text-headingColor text-[18px]">
+                      <h3 className="text-headingColor font-semibold text-[18px]">
                         Address:
                       </h3>
                       <p className="mt-1 text__para text-[14px] leading-5 md:text-[15px] lg:max-w-[390px]">
