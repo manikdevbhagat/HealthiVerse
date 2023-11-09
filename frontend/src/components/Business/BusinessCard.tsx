@@ -29,10 +29,10 @@ const BusinessCard = ({ business }: Props) => {
     }
   };
   return (
-    <div className="flex flex-col mb-6">
+    <div className=" w-[300px] md:w-[350px] flex flex-col mb-6">
       <div>
         <img
-          className=" w-[350px] h-[250px] object-cover rounded-t-xl"
+          className="w-[300px] md:w-[350px] h-[250px] object-cover rounded-t-xl"
           src={business.photo}
           alt=""
         />
@@ -57,7 +57,7 @@ const BusinessCard = ({ business }: Props) => {
         {"address" in business && (
           <div className="flex items-center gap-3 mt-2">
             <FaMapLocationDot />
-            <p className="max-w-[290px] truncate">{business.address}</p>
+            <p className="w-full truncate">{business.address}</p>
           </div>
         )}
       </div>
