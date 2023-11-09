@@ -27,9 +27,6 @@
   .hero__section{
     @apply bg-[#fde6c4];
   }
-  .testimonial__section{
-    @apply bg-[#fde6c4];
-  }
   .footer{
     @apply bg-gray-100;
   }
