@@ -11,7 +11,7 @@ const AccountDetails = ({ name, email, photo }: Props) => {
   const dispatch = useAppDispatch();
   return (
     <>
-      <div className="w-full max-w-xl px-5 py-4 mx-auto  rounded-lg shadow-lg bg-gray-800 text-gray-50">
+      <div className="w-full max-w-xl px-5 py-4 mx-auto mt-16 rounded-lg shadow-lg bg-gray-800 text-gray-50">
         <div className="w-full pt-1 mx-auto -mt-16 text-center">
           <a href="#" className="relative block">
             <img
