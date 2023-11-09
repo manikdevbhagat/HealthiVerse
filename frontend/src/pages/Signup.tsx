@@ -83,7 +83,7 @@ const Signup = () => {
           </div>
 
           {/*signup form*/}
-          <div className="rounded-r-lg py-4 md:py-10 bg-gray-800 px-4 md:px-10">
+          <div className="rounded-lg lg:rounded-l-[0px] lg:rounded-r-lg py-4 md:py-10 bg-gray-800 px-4 md:px-10">
             <h3 className="text-white text-[22px] leading-9 font-bold mb-10">
               Create a new account
             </h3>

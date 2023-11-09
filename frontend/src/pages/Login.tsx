@@ -44,7 +44,7 @@ const Login = () => {
   };
 
   return (
-    <section className="px-5 mx-5 lg:px-0">
+    <section className="px-5 lg:px-0">
       <div className="max-w-[1170px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/*image*/}
