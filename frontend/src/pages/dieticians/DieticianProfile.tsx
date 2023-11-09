@@ -1,4 +1,3 @@
-import React from "react";
 import DieticianAccount from "../../components/Dashboard/dieticians/DieticianAccount";
 import DieticianUpdateForm from "../../components/Dashboard/dieticians/DieticianUpdateForm";
 

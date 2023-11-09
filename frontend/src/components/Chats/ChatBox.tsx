@@ -48,7 +48,7 @@ const ChatBox = () => {
       };
       dispatch(sendMessage(data))
         .unwrap()
-        .then((res) => {
+        .then(() => {
           socket?.emit("new message", {
             ...data,
             chat: currentChat,

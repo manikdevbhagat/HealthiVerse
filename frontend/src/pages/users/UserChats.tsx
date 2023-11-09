@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxhooks";
 import { getAllChats } from "../../features/slices/chat/allChatsSlice";
 import { HashLoader } from "react-spinners";

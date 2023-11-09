@@ -1,4 +1,3 @@
-import React from "react";
 import TrainerAccount from "../../components/Dashboard/trainers/TrainerAccount";
 import TrainerUpdateForm from "../../components/Dashboard/trainers/TrainerUpdateForm";
 

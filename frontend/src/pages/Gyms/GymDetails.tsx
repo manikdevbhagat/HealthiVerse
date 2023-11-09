@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import gymImg from "../../assets/images/gym1.jpg";
+import { useState, useEffect } from "react";
 import starIcon from "../../assets/images/Star.png";
-import GymAbout from "../../components/Business/BusinessAbout";
 import Feedback from "../../components/Business/Feedback";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxhooks";
 import { useParams } from "react-router-dom";

@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import userService from "../../services/user/userService";
 import { AxiosError } from "axios";
-import { Dietician, Gym, Membership, Trainer } from "../../../models";
+import { Membership } from "../../../models";
 
 export const getUserMemberships = createAsyncThunk(
   "user/getMemberships",

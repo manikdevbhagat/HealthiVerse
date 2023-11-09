@@ -1,4 +1,3 @@
-import React from "react";
 import heroImg01 from "../assets/images/healthiverse1.jfif";
 import { Link } from "react-router-dom";
 import Testimonial from "../components/Testimonial/Testimonial";

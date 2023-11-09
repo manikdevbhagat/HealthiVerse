@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import { Membership } from "../../models";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxhooks";
 import { createChat, setCurrentChat } from "../../features/slices/chat/currentChatSlice";

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../hooks/reduxhooks";
+import { useAppDispatch } from "../../hooks/reduxhooks";
 import { HashLoader } from "react-spinners";
 import { useParams } from "react-router-dom";
 import { buyMembership } from "../../features/slices/users/userMembershipsSlice";

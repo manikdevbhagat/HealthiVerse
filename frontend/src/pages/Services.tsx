@@ -1,4 +1,3 @@
-import React from "react";
 import gymImg from "../assets/images/gym1_900.jpg";
 import trainerImg from "../assets/images/trainer1_900.jpg";
 import dieticianImg from "../assets/images/dietician1.jpg";

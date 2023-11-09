@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { Gym, SignupFormData, User } from "../../../models";
+import { Gym, SignupFormData } from "../../../models";
 import { AxiosError } from "axios";
 import gymService from "../../services/gym/gymService";
 

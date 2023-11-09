@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxhooks";
 import { setCurrentChat } from "../../features/slices/chat/currentChatSlice";
 import { getAllChats } from "../../features/slices/chat/allChatsSlice";
@@ -7,7 +7,7 @@ import { setChatWindow } from "../../features/slices/chat/chatWindowSlice";
 
 const MyChats = () => {
   const dispatch = useAppDispatch();
-  const { role, user } = useAppSelector((state) => state.login);
+  const { user } = useAppSelector((state) => state.login);
   const { chats } = useAppSelector((state) => state.allChats);
   const { currentChat } = useAppSelector((state) => state.currentChat);
   useEffect(() => {

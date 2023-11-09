@@ -16,7 +16,7 @@ const initialState: SocketState = {
 
 export const initializeSocketAsync = createAsyncThunk(
   "socket/initializeSocket",
-  async (_, { dispatch }) => {
+  async () => {
     const socket = initializeSocket();
     return socket; // Return the socket directly
   }

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Dietician, Gym, Trainer } from "../../models";
 import { HiStar } from "react-icons/hi";
 import { FaMapLocationDot } from "react-icons/fa6";

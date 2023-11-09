@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import chatService from "../../services/chat/chatService";
 import { AxiosError } from "axios";
 import { Chat } from "../../../models";
-import ActionButtons from "../../../components/Dashboard/common/ActionButtons";
 
 export const createChat = createAsyncThunk(
   "chats/current",

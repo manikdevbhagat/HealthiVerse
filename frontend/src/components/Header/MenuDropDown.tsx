@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useAppSelector } from "../../hooks/reduxhooks";
 
 const MenuDropDown = () => {
-  const { user, token, role } = useAppSelector((state) => state.login);
+  const { user, role } = useAppSelector((state) => state.login);
   const { userProfile } = useAppSelector((state) => state.userProfile);
   const {gymProfile} = useAppSelector(state=>state.gymProfile);
   const {trainerProfile} = useAppSelector(state=>state.trainerProfile);

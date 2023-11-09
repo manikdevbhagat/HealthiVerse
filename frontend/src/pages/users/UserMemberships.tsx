@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxhooks";
 import { getUserMemberships } from "../../features/slices/users/userMembershipsSlice";
 import MembershipCard from "../../components/Memberships/MebershipCard";

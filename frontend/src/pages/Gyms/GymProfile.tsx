@@ -1,4 +1,3 @@
-import React from "react";
 import GymAccount from "../../components/Dashboard/gyms/GymAccount";
 import GymUpdateForm from "../../components/Dashboard/gyms/GymUpdateForm";
 

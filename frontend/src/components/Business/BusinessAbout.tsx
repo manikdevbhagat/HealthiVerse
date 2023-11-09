@@ -1,4 +1,3 @@
-import React from "react";
 import { Dietician, Gym, Trainer } from "../../models";
 
 interface Props{

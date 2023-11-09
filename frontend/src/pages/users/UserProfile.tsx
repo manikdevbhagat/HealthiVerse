@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import UserUpdateForm from "../../components/Dashboard/users/UserUpdateForm";
 import UserDetails from "../../components/Dashboard/users/UserDetails";
 
