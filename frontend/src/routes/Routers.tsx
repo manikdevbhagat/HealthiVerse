@@ -3,15 +3,11 @@ import Services from "../pages/Services";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Contact from "../pages/Contact";
-import Gyms from "../pages/gyms/Gyms";
-import GymDetails from "../pages/gyms/GymDetails";
 import { Routes, Route } from "react-router-dom";
 import ProtectedRoutes from "./ProtectedRoutes";
 import UserProfile from "../pages/users/UserProfile";
 import UserMemberships from "../pages/users/UserMemberships";
-import GymProfile from "../pages/gyms/GymProfile";
 import Chats from "../pages/Chats";
-import GymMemberships from "../pages/gyms/GymMemberships";
 import Trainers from "../pages/trainers/Trainers";
 import TrainerProfile from "../pages/trainers/TrainerProfile";
 import TrainerDetails from "../pages/trainers/TrainerDetails";
@@ -21,6 +17,10 @@ import DieticianDetails from "../pages/dieticians/DieticianDetails";
 import DieticianProfile from "../pages/dieticians/DieticianProfile";
 import DieticianMemberships from "../pages/dieticians/DieticianMemberships";
 import About from "../pages/About";
+import Gyms from "../pages/gyms/Gyms";
+import GymDetails from "../pages/gyms/GymDetails";
+import GymProfile from "../pages/gyms/GymProfile";
+import GymMemberships from "../pages/gyms/GymMemberships";
 const Routers = () => {
   return (
     <Routes>
