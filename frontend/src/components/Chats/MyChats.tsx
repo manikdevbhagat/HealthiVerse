@@ -19,6 +19,9 @@ const MyChats = () => {
         Chats
       </div>
       <div className="flex flex-col px-6 py-2 gap-4 mt-4">
+        {!chats.length && (
+          <h2 className="text-gray-600 text-center text-3xl">No chats started yet</h2>
+        )}
         {chats?.map((chat) => (
           <div
             key={chat._id}
