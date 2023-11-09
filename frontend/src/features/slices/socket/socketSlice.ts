@@ -1,6 +1,5 @@
 // socketSlice.ts
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { RootState } from "../../../store/store";
 import {
   disconnectSocket,
   initializeSocket,
