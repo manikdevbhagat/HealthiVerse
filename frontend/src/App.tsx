@@ -18,7 +18,9 @@ function App() {
 
   useEffect(() => {
     // Initialize the socket connection when the app loads
-    dispatch(initializeSocketAsync());
+    if (user) {
+      dispatch(initializeSocketAsync());
+    }
 
     // Clean up the socket when the app unmounts
     return () => {
@@ -27,7 +29,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    socket?.emit("setup", user?._id);
+    if (user && socket) {
+      socket.emit("setup", user._id);
+    }
   }, [user, socket]);
 
   useEffect(() => {
