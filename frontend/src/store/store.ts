@@ -26,11 +26,13 @@ import { dieticianMembershipsReducer } from "../features/slices/dieticians/dieti
 import { allDieticiansReducer } from "../features/slices/dieticians/allDieticiansSlice";
 import { singleDieticianReducer } from "../features/slices/dieticians/singleDieticianSlice";
 import socketReducer from "../features/slices/socket/socketSlice";
+
 // import thunk from "redux-thunk";
 
 const persistConfig = {
   key: "root",
   storage,
+  blacklist: ['socket']
 };
 
 const reducer = combineReducers({
@@ -55,7 +57,7 @@ const reducer = combineReducers({
   allMessages: allMessagesReducer,
   chatWindow: chatWindowReducer,
   notifications: notificationsReducer,
-  socket: socketReducer
+  socket: socketReducer,
 });
 
 const rootReducer = (state: any, action: PayloadAction) => {
