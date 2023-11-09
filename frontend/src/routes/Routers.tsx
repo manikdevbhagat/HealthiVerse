@@ -17,7 +17,7 @@ import DieticianDetails from "../pages/dieticians/DieticianDetails";
 import DieticianProfile from "../pages/dieticians/DieticianProfile";
 import DieticianMemberships from "../pages/dieticians/DieticianMemberships";
 import About from "../pages/About";
-import Gyms from "../pages/gyms/Gyms";
+import Gyms from "../pages/gyms/Gyms.tsx";
 import GymDetails from "../pages/gyms/GymDetails";
 import GymProfile from "../pages/gyms/GymProfile";
 import GymMemberships from "../pages/gyms/GymMemberships";
