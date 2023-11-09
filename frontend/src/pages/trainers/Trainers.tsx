@@ -53,7 +53,7 @@ const Trainers = () => {
           <section className="pt-0">
             <div className="container">
               <div className="flex gap-5 flex-wrap justify-around">
-                {trainers.map((trainer) =>
+                {trainers?.map((trainer) =>
                   trainer.name
                     .toLowerCase()
                     .includes(searchInput.toLowerCase()) ? (

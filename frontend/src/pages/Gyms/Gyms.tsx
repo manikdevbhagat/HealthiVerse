@@ -53,7 +53,7 @@ const Gyms = () => {
           <section className="pt-0">
             <div className="container">
               <div className="flex gap-5 flex-wrap justify-around">
-                {gyms.map((gym) =>
+                {gyms?.map((gym) =>
                   gym.name.toLowerCase().includes(searchInput.toLowerCase()) ? (
                     <Link key={gym._id} to={`/gyms/${gym._id}`}>
                       <BusinessCard business={gym} />

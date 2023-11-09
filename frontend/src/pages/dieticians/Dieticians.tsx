@@ -55,7 +55,7 @@ const Dieticians = () => {
           <section className="pt-0">
             <div className="container">
               <div className="flex gap-5 flex-wrap justify-around">
-                {dieticians.map((dietician) =>
+                {dieticians?.map((dietician) =>
                   dietician.name
                     .toLowerCase()
                     .includes(searchInput.toLowerCase()) ? (
