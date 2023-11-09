@@ -30,9 +30,9 @@ const BusinessCard = ({ business }: Props) => {
   };
   return (
     <div className=" w-[300px] md:w-[350px] flex flex-col mb-6">
-      <div>
+      <div className="w-full">
         <img
-          className="w-[300px] md:w-[350px] h-[250px] object-cover rounded-t-xl"
+          className="w-full h-[250px] object-cover rounded-t-xl"
           src={business.photo}
           alt=""
         />
