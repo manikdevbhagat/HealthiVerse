@@ -20,7 +20,9 @@ const MyChats = () => {
       </div>
       <div className="flex flex-col px-6 py-2 gap-4 mt-4">
         {!chats.length && (
-          <h2 className="text-gray-600 text-center text-3xl">No chats started yet</h2>
+          <h2 className="text-gray-600 text-center text-3xl">
+            No chats started yet
+          </h2>
         )}
         {chats?.map((chat) => (
           <div
@@ -33,22 +35,22 @@ const MyChats = () => {
               currentChat?._id === chat._id
                 ? "bg-blue-600 text-white"
                 : "bg-white text-black"
-            } px-4 py-2 rounded-lg h-[70px] cursor-pointer`}
+            } px-4 py-2 rounded-lg h-[70px] cursor-pointer h-auto`}
           >
-            <div className="flex items-center justify-left gap-4">
-              <div>
+            <div className="flex flex-row items-center justify-left gap-4">
+              <div className="min-w-[55px]">
                 <img
                   className="rounded-full h-[50px] w-[55px]"
                   src={user ? getChatData(user._id, chat).photo : ""}
                   alt=""
                 />
               </div>
-              <div className="flex flex-col w-full">
+              <div className="min-w-0 flex flex-col flex-initial">
                 <div className="flex justify-between">
                   <h3 className="font-semibold">
                     {user && getChatData(user._id, chat).name}
                   </h3>
-                  <p>
+                  <p className="text-[11px]">
                     {chat.latestMessage &&
                       new Date(chat.latestMessage.createdAt).toLocaleTimeString(
                         [],
@@ -56,7 +58,12 @@ const MyChats = () => {
                       )}
                   </p>
                 </div>
-                <p className="w-full truncate">{chat.latestMessage?.content}</p>
+
+                <div>
+                  <p className="text-[14px] truncate">
+                    {chat.latestMessage?.content}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
