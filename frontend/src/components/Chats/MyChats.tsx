@@ -45,18 +45,18 @@ const MyChats = () => {
               </div>
               <div className="flex flex-col w-full">
                 <div className="flex justify-between">
-                  <div className="font-semibold">
+                  <h3 className="font-semibold">
                     {user && getChatData(user._id, chat).name}
-                  </div>
-                  <div>
+                  </h3>
+                  <p>
                     {chat.latestMessage &&
                       new Date(chat.latestMessage.createdAt).toLocaleTimeString(
                         [],
                         { hour: "2-digit", minute: "2-digit" }
                       )}
-                  </div>
+                  </p>
                 </div>
-                <div>{chat.latestMessage?.content}</div>
+                <p>{chat.latestMessage?.content}</p>
               </div>
             </div>
           </div>
