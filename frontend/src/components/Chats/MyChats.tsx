@@ -56,7 +56,7 @@ const MyChats = () => {
                       )}
                   </p>
                 </div>
-                <p>{chat.latestMessage?.content}</p>
+                <p className="w-full truncate">{chat.latestMessage?.content}</p>
               </div>
             </div>
           </div>
