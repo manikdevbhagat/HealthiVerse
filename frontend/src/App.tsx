@@ -26,7 +26,7 @@ function App() {
     return () => {
       if (socket) dispatch(disconnectSocketAsync(socket));
     };
-  }, []);
+  }, [user]);
 
   useEffect(() => {
     if (user && socket) {
