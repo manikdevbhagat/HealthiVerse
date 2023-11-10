@@ -45,7 +45,7 @@ const MyChats = () => {
                   alt=""
                 />
               </div>
-              <div className="min-w-0 flex flex-col flex-initial">
+              <div className="min-w-0 w-full flex flex-col flex-initial">
                 <div className="flex justify-between">
                   <h3 className="font-semibold">
                     {user && getChatData(user._id, chat).name}
