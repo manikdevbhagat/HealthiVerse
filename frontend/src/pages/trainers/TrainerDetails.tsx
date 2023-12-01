@@ -7,6 +7,7 @@ import { ClipLoader } from "react-spinners";
 import MembershipPrice from "../../components/Business/MembershipPrice";
 import BusinessAbout from "../../components/Business/BusinessAbout";
 import { getSingleTrainer } from "../../features/slices/trainers/singleTrainerSlice";
+import Error404 from "../Error";
 
 const TrainerDetails = () => {
   const [tab, setTab] = useState("about");
@@ -25,6 +26,10 @@ const TrainerDetails = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  if(!loading &&  !trainer){
+    return <Error404/>
+  }
 
   return (
     <>

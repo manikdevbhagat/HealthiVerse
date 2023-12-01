@@ -17,7 +17,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 const corsOptions = {
-  origin: "https://healthiverse.onrender.com",
+  origin:true
 };
 
 //middleware
@@ -61,7 +61,7 @@ import { Server } from "socket.io";
 const io = new Server(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://healthiverse.onrender.com",
+    origin: "http://localhost:5173",
   },
 });
 

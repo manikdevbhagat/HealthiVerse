@@ -7,6 +7,7 @@ import { ClipLoader } from "react-spinners";
 import MembershipPrice from "../../components/Business/MembershipPrice";
 import BusinessAbout from "../../components/Business/BusinessAbout";
 import { getSingleDietician } from "../../features/slices/dieticians/singleDieticianSlice";
+import Error404 from "../Error";
 
 const DieticianDetails = () => {
   const [tab, setTab] = useState("about");
@@ -30,6 +31,10 @@ const DieticianDetails = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  if(!loading && !dietician){
+    return <Error404/>
+  }
 
   return (
     <>

@@ -3,7 +3,7 @@ import Services from "../pages/Services";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Contact from "../pages/Contact";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import ProtectedRoutes from "./ProtectedRoutes";
 import UserProfile from "../pages/users/UserProfile";
 import UserMemberships from "../pages/users/UserMemberships";
@@ -21,6 +21,7 @@ import Gyms from "../pages/Gyms/Gyms.tsx";
 import GymDetails from "../pages/Gyms/GymDetails.tsx";
 import GymProfile from "../pages/Gyms/GymProfile.tsx";
 import GymMemberships from "../pages/Gyms/GymMemberships.tsx";
+import Error404 from "../pages/Error.tsx";
 const Routers = () => {
   return (
     <Routes>
@@ -107,6 +108,8 @@ const Routers = () => {
           </ProtectedRoutes>
         }
       />
+
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };

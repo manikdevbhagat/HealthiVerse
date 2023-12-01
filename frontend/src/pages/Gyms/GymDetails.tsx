@@ -7,6 +7,7 @@ import { getSingleGym } from "../../features/slices/gyms/singleGymSlice";
 import { ClipLoader } from "react-spinners";
 import MembershipPrice from "../../components/Business/MembershipPrice";
 import BusinessAbout from "../../components/Business/BusinessAbout";
+import Error404 from "../Error";
 
 const GymDetails = () => {
   const [tab, setTab] = useState("about");
@@ -25,6 +26,10 @@ const GymDetails = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  if(!loading && !gym){
+    return <Error404/>
+  }
 
   return (
     <>
