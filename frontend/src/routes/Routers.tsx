@@ -21,7 +21,7 @@ import Gyms from "../pages/Gyms/Gyms.tsx";
 import GymDetails from "../pages/Gyms/GymDetails.tsx";
 import GymProfile from "../pages/Gyms/GymProfile.tsx";
 import GymMemberships from "../pages/Gyms/GymMemberships.tsx";
-import Error404 from "../pages/Error.tsx";
+
 const Routers = () => {
   return (
     <Routes>
